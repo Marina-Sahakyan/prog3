@@ -1,5 +1,9 @@
-class Grass extends LivingCreature{
+var LivingCreature =require("./class.livingcreature");
+
+
+module.exports = class Grass extends LivingCreature{
     constructor(x, y) {
+        super(x,y);
         this.x = x
         this.y = y
         this.multiplay = 0
@@ -57,3 +61,4 @@ class Grass extends LivingCreature{
         }
     }
 }
+

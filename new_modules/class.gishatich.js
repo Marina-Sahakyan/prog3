@@ -1,9 +1,11 @@
-class Gishatich extends LivingCreature{
+var LivingCreature =require("./class.livingcreature");
+module.exports = class Gishatich extends LivingCreature {
     constructor(x, y) {
+        super(x,y);
         this.x = x
         this.y = y
         this.energy = 15
-        this.directions = [];
+        this.directions = []
         matrix[y][x] = 3
         gishatichArr.push(this)
     }

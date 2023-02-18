@@ -18,7 +18,7 @@ function generateMatrix(size, grassCount, grassEaterCount) {
       let x = Math.round(Math.random() * (size - 1))
       let y = Math.round(Math.random() * (size - 1))
       if (matrix[y][x] == 0) {
-         new Grass(x, y)
+         new Grass(x, y);
       }
       else {
          i--
@@ -38,7 +38,7 @@ function generateMatrix(size, grassCount, grassEaterCount) {
 
 
 }
-generateMatrix(50, 10, 4)
+generateMatrix(50, 10, 4);
 
 let z;
 for (let y = 0; y < 50; y++) {

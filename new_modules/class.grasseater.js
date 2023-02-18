@@ -1,5 +1,7 @@
-class GrassEater extends LivingCreature{
+var LivingCreature =require("./class.livingcreature");
+ class GrassEater extends LivingCreature {
     constructor(x, y) {
+        super(x, y);
         this.x = x
         this.y = y
         this.energy = 15
@@ -21,22 +23,24 @@ class GrassEater extends LivingCreature{
 
     }
     chooseCell(n) {
-        this.updateDirection()
-        let found = []
+        this.getNewCoordinates();
 
-        for (let i in this.directions) {
-            let x = this.directions[i][0]
-            let y = this.directions[i][1]
-            if (x >= 0 && y >= 0 && x < matrix.length && y < matrix.length) {
+        // this.updateDirection();
+        // let found = [];
+
+        // for (let i in this.directions) {
+        //     let x = this.directions[i][0]
+        //     let y = this.directions[i][1]
+        //     if (x >= 0 && y >= 0 && x < matrix.length && y < matrix.length) {
 
 
-                if (matrix[y][x] == n) {
+        //         if (matrix[y][x] == n) {
 
-                    found.push(this.directions[i])
-                }
-            }
-        }
-        return found
+        //             found.push(this.directions[i])
+        //         }
+        //     }
+        // }
+        return super.chooseCell(n);
     }
     start() {
 
