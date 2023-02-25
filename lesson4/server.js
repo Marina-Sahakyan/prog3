@@ -11,10 +11,12 @@ app.get('/', function (req, res) {
 res.redirect('index.html');
 });
 
+// matrix = []
+// matrix = [1,1,1]
 io.on('connection', function (socket) {
 
     for(var i in messages) {
-    socket.emit("display message", messages[i]);
+     socket.emit("display message", messages[i]);
     }
     
     socket.on("send message", function (data) {

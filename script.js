@@ -15,3 +15,4 @@ this.innerText = str;
 var p = document.getElementById("pElement");
 
 p.addEventListener("click", clickHandler);
+

@@ -1,6 +1,7 @@
 <html>
    <head>
-       
+    <script src="/socket.io/socket.io.js"></script>
+
        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
        <script src="class.livingcreature.js"></script>
        <script  src="class.js"></script>
@@ -10,7 +11,36 @@
        <script  src="class.person.js"></script>
        <script  src="script2.js"></script>
    </head>
-   <body>
-      
-   </body>
+   <div id="chat">
+
+</div>
+<input type="text" placeholder="Enter messages" id="message">
+<br>
+<button id="submit">Submit</button>
+</body>
+<!-- <script>
+function main() {
+    var socket = io();
+    var chatDiv = document.getElementById('chat');
+    var input = document.getElementById('message');
+    var button = document.getElementById('submit');
+    function handleSubmit() {
+        var val = input.value;
+        if (val != "") {
+            socket.emit("send message", val);
+        }
+    }
+    button.onclick = handleSubmit;
+
+function handleMessage(msg) {
+    var p = document.createElement('p');
+    p.innerText = msg;
+    chatDiv.appendChild(p);
+    input.value = "";
+}
+socket.on('display message', handleMessage);
+}
+window.onload = main;
+
+</script> -->
 </html>
